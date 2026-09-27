@@ -271,7 +271,7 @@ h1, h2, h3, h4 {
 
 .marca { padding: 0.4rem 0.2rem 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.14); margin-bottom: 0.8rem; }
 .marca-titulo { font-size: 1.6rem; font-weight: 800; font-stretch: 125%; color: #FFFFFF !important; line-height: 1; }
-.marca-sub { font-size: 0.82rem; opacity: 0.8; margin-top: 0.35rem; }
+.marca-sub { font-size: 0.82rem; color: #DCE6EC !important; opacity: 0.85; margin-top: 0.35rem; }
 .pistas-mini { display: flex; gap: 4px; margin-top: 0.8rem; }
 .pistas-mini i { flex: 1; height: 6px; border-radius: 1px; }
 
