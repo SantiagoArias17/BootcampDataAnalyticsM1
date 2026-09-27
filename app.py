@@ -241,8 +241,12 @@ ESTILOS_CSS = """
 }
 [data-testid="stHeader"] { background: transparent; }
 
-html, body, [class*="st-"], .stMarkdown, button, input, textarea {
+html, body, .stMarkdown, button, input, textarea {
   font-family: 'Archivo', system-ui, sans-serif;
+}
+/* Los íconos de Streamlit usan su propia fuente: no se sobrescribe */
+[data-testid="stIconMaterial"], .material-symbols-rounded {
+  font-family: 'Material Symbols Rounded' !important;
 }
 .block-container { padding-top: 2.2rem; max-width: 1240px; }
 
