@@ -675,15 +675,15 @@ def esquema_pozo(altura: int = 440) -> None:
 # ---------------------------------------------------------------------------
 # Estilo común de gráficos Plotly
 # ---------------------------------------------------------------------------
-def estilo_grafico(fig, titulo: str, x: str, y: str, altura: int = 420):
+def estilo_grafico(fig, titulo: str, x: str, y: str, altura: int = 480):
     fig.update_layout(
         title=dict(text=titulo, font=dict(size=16, color=TINTA), x=0, xanchor="left"),
         font=dict(family="Archivo, sans-serif", color=TINTA, size=13),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         height=altura,
-        margin=dict(l=60, r=20, t=56, b=50),
-        legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="right", x=1, bgcolor="rgba(0,0,0,0)"),
+        margin=dict(l=60, r=20, t=56, b=120),
+        legend=dict(orientation="h", yanchor="top", y=-0.18, xanchor="left", x=0, bgcolor="rgba(0,0,0,0)"),
         hoverlabel=dict(bgcolor="#FFFFFF", font=dict(family="Archivo, sans-serif", color=TINTA)),
     )
     fig.update_xaxes(title_text=x, gridcolor=RETICULA, zeroline=False, linecolor=TINTA_SUAVE, showline=True)
@@ -1088,6 +1088,7 @@ def tab_reservorios() -> None:
             ))
             estilo_grafico(fig_barras, "POES frente a recuperable", "", "MMSTB", altura=380)
             fig_barras.update_yaxes(range=[0, max(valores) * 1.2 if max(valores) > 0 else 1])
+            fig_barras.update_layout(margin=dict(b=40))
             st.plotly_chart(fig_barras, width="stretch", key="graf_barras")
 
 
